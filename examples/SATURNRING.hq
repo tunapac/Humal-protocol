@@ -1,0 +1,16 @@
+// hum-q - Greater than greatest - Orbital verb
+use std::saturnring
+
+func main() {
+  let q0 = qubit(0)
+  let q1 = qubit(1)
+  H q0
+  CX q0, q1  // entangle
+  
+  // THIS IS WHAT THEY DON'T HAVE - orbital mint
+  let proof = store q0, q1 -> SaturnRingchain Orbital
+  // -> mints 10B QB storage + TX 1788729621 + huma629_ hash
+  
+  measure q0, q1 -> c
+  print c // 00 50% | 11 50% <2MS HUMAS://
+}
