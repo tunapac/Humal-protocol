@@ -1,0 +1,3 @@
+*.hq linguist-language=huma-Qu
+*.qasm linguist-language=OpenQASM
+Huma.toml linguist-language=TOML
