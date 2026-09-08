@@ -1,0 +1,47 @@
+// ========================================================
+// HUMAL SOVEREIGN SPREADSHEET CELL ENGINE PARSER
+// Native Compiler Target: HC-C++ / H++ C-Bootstrap Engine
+// ========================================================
+
+module HUMAL_Cell_Engine {
+    import Huma.Protocol.Ledger;
+    import Alge.Math.Core;
+    import Vortex.Parallel.Pipeline;
+
+    define Prefix TARGET_PREFIX = "Huma629";
+
+    struct CellExpression {
+        string raw_formula;
+        string target_address;
+        string contract_target;
+        string method_name;
+    }
+
+    public function parse_cell_expression(string input_str) -> CellResult {
+        if (!input_str.startsWith("=HUMAL.")) {
+            return Alge.eval_matrix_cell(input_str);
+        }
+
+        CellExpression expr = extract_tokens(input_str);
+
+        if (!expr.target_address.startsWith(TARGET_PREFIX)) {
+            return CellResult.Error("INVALID_SOVEREIGN_PREFIX");
+        }
+
+        match (expr.method_name) {
+            case "STATE" => {
+                return execute_hvm_state_read(expr.target_address, expr.contract_target);
+            }
+            case "EXECUTE" => {
+                return execute_hvm_contract_call(expr.target_address, expr.contract_target);
+            }
+            default => {
+                return CellResult.Error("UNKNOWN_HUMAL_FORMULA");
+            }
+        }
+    }
+
+    private function execute_hvm_state_read(string addr, string contract_file) -> CellResult {
+        return HC_CPP.native_hvm_read(addr, contract_file);
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "tower": "62910000000",
+  "tld": ".huma",
+  "base": {
+    "lat": 7.7322,
+    "lon": 8.5391,
+    "name": "Benue Mountain Master"
+  },
+  "quantum_nodes": "9.9 quindecillion",
+  "chain": "0bac5410efd9c516",
+  "gps_server": "ACTIVE",
+  "timestamp": 1788379380.503222
+}

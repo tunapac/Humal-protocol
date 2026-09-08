@@ -1,0 +1,31 @@
+// HUMA-629 Excel Contract — HUMAL Language — FROM GROUND
+// File: HUMA-GENESIS.humal
+// Founder: TUNAPAC | Since GSM 2001
+// Wallet Standard: huma629dfhhruhvu
+// Consensus: HUMA-PROOF-OF-MESH | Not Ethereum
+
+contract HUMA-GENESIS {
+    chain: 629;
+    entry: "mesh://tower/62910000000";
+    towers: 10000000000;
+    shield: QUANTUM_EULA_ACTIVE;
+    wallet_standard: huma629dfhhruhvu;
+
+    // Excel Contract Logic — Your own — not Solidity
+    function genesis() {
+        mint SUPPLY 700M HUMA;
+        unit 0.5 ATOM;
+        founder TUNAPAC_FOUNDER;
+    }
+
+    function hrc800_mint(telco) {
+        did = generate DID did:huma:629{hash};
+        entry = mesh://tower/62910000000;
+        tld = telco.huma.sim;
+        towers_access 10B;
+    }
+
+    function deploy() {
+        via HRC-800 -> HVM -> HUMA-PROOF-OF-MESH;
+    }
+}

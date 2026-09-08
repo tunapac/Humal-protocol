@@ -1,0 +1,25 @@
+{
+  "compiler": "humalc V7-DUAL-SIGNATURE-OWN",
+  "protocol": "HUMA-629",
+  "chain_id": 629,
+  "contract": "HUMA_GENESIS",
+  "contract_file": "HUMA-GENESIS.humal",
+  "vm": "HVM",
+  "public": {
+    "bytecode": "HVM:113b1d4bbc7ceee33dff7a6ca6fd5b702aa453ee500e837b1fb3f3d80705e3b1",
+    "use": "PUBLIC INTERACTION TO BLOCKCHAIN \u2014 ANYONE",
+    "format": "HVM:{SHA256} \u2014 OFFICIAL HUMA-629 PUBLIC BYTECODE"
+  },
+  "architect": {
+    "bytecode": "HUMA629:ARCHITECT:TUNAPAC:CHAIN629:HUMA_GENESIS:113b1d4bbc7ceee33dff7a6ca6fd5b702aa453ee500e837b1fb3f3d80705e3b1:huma629dfhhruhvu4d5b0d30ede6c5d6f9d8da0514970356",
+    "use": "ARCHITECT SIGNATORY \u2014 PERSONAL INTERACTION \u2014 STANDALONE SIGNATURE",
+    "architect": "TUNAPAC",
+    "since": "GSM 2001",
+    "wallet": "huma629dfhhruhvu4d5b0d30ede6c5d6f9d8da0514970356",
+    "rights": "FOUNDER / ARCHITECT / ROOT ACCESS TO LEDGER",
+    "format": "HUMA629:ARCHITECT:TUNAPAC:CHAIN629:CONTRACT:SHA:WALLET \u2014 OWN SIGNATORY"
+  },
+  "consensus": "HUMA-PROOF-OF-MESH",
+  "entry": "mesh://tower/62910000000",
+  "compiled_at": "2026-09-08T04:49:13.183935"
+}
