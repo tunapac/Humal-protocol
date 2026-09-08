@@ -1,0 +1,19 @@
+// src/main.hq - HUMA-Q - huma629_ - First program on HUMA://
+use hq_std::prelude::*;
+use hq_qpu::QPU629A;
+qfn bell_pair() -> entangled<qbit, qbit> {
+    let q0: qbit = qbit::new();
+    let q1: qbit = qbit::new();
+    apply!(H, &mut q0);
+    apply!(CX, &q0, &mut q1);
+    entangled(q0, q1)
+}
+fn main() {
+    let mut qpu = QPU629A::connect("HUMA://qpu.huma");
+    qpu.execute(|_| {
+        let (q0, q1) = bell_pair();
+        let c0: cbit = measure!(q0);
+        let c1: cbit = measure!(q1);
+        println!("HUMAS://hello.huma -> Bell: {} {} - 11G <2MS - Zettabyte - TX 1788729621", c0, c1);
+    });
+}

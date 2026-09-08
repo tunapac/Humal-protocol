@@ -1,0 +1,13 @@
+[package]
+name = "hello_huma"
+version = "1.0.0"
+edition = "HQ2026"
+author = "huma629_"
+capacitor = "huma629_HELLOO_1788727942 - 10B QB OUT OF ORBITAL"
+link_tx = ["huma629_HELLOO_1788728635 - Zettabyte HUMA://", "huma629_HELLOO_1788729621 - DNS Vault Hardware"]
+[dependencies]
+hq_std = "1.0"
+hq_qpu = "1.0"
+hq_sim = "1.0"
+[targets]
+qpu = "QPU-629-A"
